@@ -9,28 +9,6 @@
 * should return false. You may assume that each angle passed is non-negative.
 */
 
-public static boolean anglePairs(int a, int b, int c) {
-    if (a + b == 90) {
-        if (a + c == 180) {
-            return true;
-        } else if (b + c == 180) {
-            return true;
-        }
-        return false;
-    } else if (a + c == 90) {
-        if (b + c == 180) {
-            return true;
-        } else if (a + b == 180) {
-            return true;
-        }
-        return false;
-    } else if (b + c == 90) {
-        if (a + c == 180) {
-            return true;
-        } else if (a + b == 180) {
-            return true;
-        }
-        return false;
-    }
-    return false;
+public static boolean anglePairs(int x, int y, int z) {
+    return ((x+y==90 || x+z==90 || y+z==90) && (x+y==180 || x+z==180 || y+z==180));
 }
